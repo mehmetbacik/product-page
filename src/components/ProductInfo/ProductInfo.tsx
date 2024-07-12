@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Product } from "../../data/products";
 import { useCart } from "../../context/CartContext";
+import { toast } from "react-toastify";
 
 interface ProductInfoProps {
   product: Product;
@@ -22,6 +23,15 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
 
   const discountPrice =
     product.price - (product.price * product.discountPercentage) / 100;
+
+  const handleAddToCart = () => {
+    if (quantity > 0) {
+      addToCart(product, quantity);
+      toast.success(`${product.title} added to cart`);
+    } else {
+      toast.error("Please select at least one quantity");
+    }
+  };
 
   return (
     <div className="product-info p-4 md:p-8">
@@ -45,6 +55,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         <button
           onClick={decreaseQuantity}
           className="px-2 py-1 bg-gray-200 rounded-l"
+          disabled={quantity === 0}
         >
           -
         </button>
@@ -58,8 +69,13 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
       </div>
       <div className="flex items-center">
         <button
-          onClick={() => addToCart(product, quantity)}
-          className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+          onClick={handleAddToCart}
+          className={`bg-blue-600 text-white py-2 px-4 rounded ${
+            quantity === 0
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-blue-700 transition duration-300"
+          }`}
+          disabled={quantity === 0}
         >
           Add to Cart
         </button>
