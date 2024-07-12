@@ -1,19 +1,20 @@
 export interface Product {
   id: number;
-  name: string;
+  title: string;
   description: string;
   price: number;
-  discountPrice?: number;
-  images: string[];
+  discountPercentage: number;
+  brand: string; // Yeni alan eklendi
 }
 
 export const products: Product[] = [
   {
     id: 1,
-    name: "Sample Product",
-    description: "This is a sample product description.",
-    price: 100,
-    discountPrice: 80,
-    images: ["/path/to/image1.jpg", "/path/to/image2.jpg"],
+    title: "Fall Limited Edition Sneakers",
+    description:
+      "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+    price: 250.0,
+    discountPercentage: 50,
+    brand: "Sneaker Company",
   },
 ];

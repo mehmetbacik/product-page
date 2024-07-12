@@ -1,0 +1,31 @@
+.product-info {
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    button {
+      background-color: #f3f4f6;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+
+      &:first-of-type {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+
+    span {
+      background-color: #f9fafb;
+      padding: 0.5rem 1rem;
+      border-left: 1px solid #e5e7eb;
+      border-right: 1px solid #e5e7eb;
+    }
+  }
+}
