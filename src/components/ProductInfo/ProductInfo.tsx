@@ -43,7 +43,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         {product.discountPercentage > 0 && (
           <>
             <span className="ml-4 text-green-600 bg-green-100 p-1 rounded">
-              {product.discountPercentage}% OFF
+              {product.discountPercentage}%
             </span>
             <span className="ml-4 text-gray-500 line-through">
               ${product.price.toFixed(2)}

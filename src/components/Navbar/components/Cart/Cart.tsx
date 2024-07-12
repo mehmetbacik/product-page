@@ -5,10 +5,14 @@ import { useCart } from "../../../../context/CartContext";
 
 const Cart: React.FC = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { cartItems } = useCart();
+  const { cartItems, removeFromCart } = useCart();
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
+  };
+
+  const handleRemove = (id: number) => {
+    removeFromCart(id);
   };
 
   return (
@@ -21,7 +25,11 @@ const Cart: React.FC = () => {
       />
       {isCartOpen && (
         <div className="cart-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-          <OrderSummary cartItems={cartItems} onClose={toggleCart} />
+          <OrderSummary
+            cartItems={cartItems}
+            onRemove={handleRemove}
+            onClose={toggleCart}
+          />
         </div>
       )}
     </div>
