@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Product } from "../../data/products";
+import { useCart } from "../../context/CartContext";
 
 interface ProductInfoProps {
   product: Product;
@@ -7,6 +8,7 @@ interface ProductInfoProps {
 
 const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   const [quantity, setQuantity] = useState(0);
+  const { addToCart } = useCart();
 
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
@@ -31,7 +33,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         {product.discountPercentage > 0 && (
           <>
             <span className="ml-4 text-green-600 bg-green-100 p-1 rounded">
-              {product.discountPercentage}%
+              {product.discountPercentage}% OFF
             </span>
             <span className="ml-4 text-gray-500 line-through">
               ${product.price.toFixed(2)}
@@ -39,7 +41,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
           </>
         )}
       </div>
-      <div className="flex items-center mb-4">
+      <div className="quantity-selector flex items-center mb-4">
         <button
           onClick={decreaseQuantity}
           className="px-2 py-1 bg-gray-200 rounded-l"
@@ -55,7 +57,10 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         </button>
       </div>
       <div className="flex items-center">
-        <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+        <button
+          onClick={() => addToCart(product, quantity)}
+          className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+        >
           Add to Cart
         </button>
       </div>

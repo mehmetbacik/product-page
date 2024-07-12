@@ -4,7 +4,7 @@ export interface Product {
   description: string;
   price: number;
   discountPercentage: number;
-  brand: string; // Yeni alan eklendi
+  brand: string;
 }
 
 export const products: Product[] = [
