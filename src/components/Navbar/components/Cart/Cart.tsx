@@ -15,14 +15,22 @@ const Cart: React.FC = () => {
     removeFromCart(id);
   };
 
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
-    <div className="cart relative">
+    <div className="cart relative flex items-center">
       <img
         src={CartImg}
         alt="Cart"
         className="text-gray-700 text-2xl cursor-pointer"
         onClick={toggleCart}
       />
+      <div className="ml-2 text-sm">
+        <p>Total Items: {totalItems}</p>
+      </div>
       {isCartOpen && (
         <div className="cart-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
           <OrderSummary
