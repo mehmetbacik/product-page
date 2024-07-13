@@ -1,5 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
+import OrderSummaryItem from "./components/OrderSummaryItem";
 
 interface OrderSummaryProps {
   cartItems: {
@@ -23,38 +24,21 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({
   };
 
   return (
-    <div className="cart-summary bg-white p-4 shadow-md rounded-md">
+    <div className="order-summary bg-white p-4 shadow-md rounded-md">
       <h2 className="text-lg font-bold mb-4">Order Summary</h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <div>
           {cartItems.map((item) => (
-            <div
+            <OrderSummaryItem
               key={item.id}
-              className="flex items-center justify-between mb-4"
-            >
-              <img
-                src={`/src/assets/images/${item.id}.jpg`}
-                alt={item.title}
-                className="w-16 h-16 object-cover"
-              />
-              <div className="ml-4 flex-1">
-                <h3 className="text-sm font-semibold">{item.title}</h3>
-                <p className="text-sm text-gray-500">
-                  ${item.price.toFixed(2)} x {item.quantity}
-                </p>
-                <p className="text-sm font-bold">
-                  ${item.price * item.quantity}
-                </p>
-              </div>
-              <button
-                onClick={() => handleRemove(item.id, item.title)}
-                className="text-red-500 text-sm"
-              >
-                Remove
-              </button>
-            </div>
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              quantity={item.quantity}
+              onRemove={handleRemove}
+            />
           ))}
         </div>
       )}
