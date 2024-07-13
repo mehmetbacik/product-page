@@ -6,8 +6,8 @@ import { products } from "../data/products";
 const ProductPage: React.FC = () => {
   const product = products[0];
   return (
-    <div className="product">
-      <ProductGallery />
+    <div className="product flex items-center gap-2">
+      <ProductGallery product={products[0]} />
       <ProductInfo product={product} />
     </div>
   );
