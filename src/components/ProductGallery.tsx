@@ -12,6 +12,7 @@ interface ProductGalleryProps {
 const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [mainImageIndex, setMainImageIndex] = useState(0);
 
   const openGallery = (index: number) => {
     setSelectedImage(index);
@@ -33,14 +34,18 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
     );
   };
 
+  const selectMainImage = (index: number) => {
+    setMainImageIndex(index);
+  };
+
   return (
     <div className="product-gallery">
       <div className="main-image mb-4">
         <img
-          src={product.images[0]}
+          src={product.images[mainImageIndex]}
           alt={product.title}
           className="w-full h-full object-cover cursor-pointer"
-          onClick={() => openGallery(0)}
+          onClick={() => openGallery(mainImageIndex)}
         />
       </div>
       <div className="thumbnails grid grid-cols-4 gap-2">
@@ -49,8 +54,10 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
             key={index}
             src={image}
             alt={product.title}
-            className="w-full h-full object-cover cursor-pointer"
-            onClick={() => openGallery(index)}
+            className={`w-full h-full object-cover cursor-pointer ${
+              mainImageIndex === index ? "border-2 border-blue-500" : ""
+            }`}
+            onClick={() => selectMainImage(index)}
           />
         ))}
       </div>
@@ -64,7 +71,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="relative bg-white p-4 rounded"
+              className="relative bg-white p-4 rounded max-w-2xl w-full mx-auto"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
