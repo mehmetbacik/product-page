@@ -1,5 +1,5 @@
 import React from "react";
-import ProductGallery from "../components/ProductGallery";
+import ProductGallery from "../components/ProductGallery/ProductGallery";
 import ProductInfo from "../components/ProductInfo/ProductInfo";
 import { products } from "../data/products";
 
