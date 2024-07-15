@@ -35,5 +35,21 @@
         }
       }
     }
+    .cart {
+      cursor: pointer;
+      .total-items {
+        position: absolute;
+        top: -5px;
+        right: -8px;
+        background-color: $orange;
+        padding: 0px 6px;
+        border-radius: 15px;
+        p {
+          font-size: 10px;
+          font-weight: bold;
+          color: $white;
+        }
+      }
+    }
   }
 }

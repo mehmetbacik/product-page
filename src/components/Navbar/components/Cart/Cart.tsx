@@ -21,14 +21,9 @@ const Cart: React.FC = () => {
   );
 
   return (
-    <div className="cart relative flex items-center">
-      <img
-        src={CartImg}
-        alt="Cart"
-        className="text-gray-700 text-2xl cursor-pointer"
-        onClick={toggleCart}
-      />
-      <div className="ml-2 text-sm">
+    <div className="cart relative flex items-center" onClick={toggleCart}>
+      <img src={CartImg} alt="Cart" />
+      <div className="total-items">
         <p>{totalItems}</p>
       </div>
       {isCartOpen && (
