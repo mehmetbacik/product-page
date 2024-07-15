@@ -29,7 +29,7 @@ const Cart: React.FC = () => {
         onClick={toggleCart}
       />
       <div className="ml-2 text-sm">
-        <p>Total Items: {totalItems}</p>
+        <p>{totalItems}</p>
       </div>
       {isCartOpen && (
         <div className="cart-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">

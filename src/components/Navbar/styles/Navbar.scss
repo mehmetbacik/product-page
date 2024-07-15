@@ -1,8 +1,39 @@
+@import "../../../styles/variables.scss";
+
 .navbar {
+  border-bottom: solid 1px $grayish-blue;
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
     .nav-links {
       a {
-        transition: color 0.3s ease;
+        font-size: 14px;
+        font-weight: 500;
+        color: $dark-grayish-blue;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom: solid 3px transparent;
+        &:hover {
+          color: $black;
+          border-color: $orange;
+        }
       }
     }
   }
-  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .user {
+      img {
+        border-radius: 50%;
+        border: solid 2px transparent;
+        &:hover {
+          border-color: $orange;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

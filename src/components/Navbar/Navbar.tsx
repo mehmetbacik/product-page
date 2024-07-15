@@ -15,12 +15,16 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar bg-white shadow-md py-4 px-8 flex justify-between items-center relative">
+    <nav className="navbar container mx-auto mb-4 flex justify-between items-center relative">
       <MobileMenuButton toggleMenu={toggleMenu} />
-      <Logo />
-      <NavLinks />
-      <Cart />
-      <User />
+      <div className="nav-left">
+        <Logo />
+        <NavLinks />
+      </div>
+      <div className="nav-right">
+        <Cart />
+        <User />
+      </div>
       <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
     </nav>
   );
