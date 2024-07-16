@@ -5,6 +5,7 @@ import ProductDetails from "./components/ProductDetails";
 import AddToCartButton from "./components/AddToCartButton";
 import { useCart } from "../../context/CartContext";
 import { toast } from "react-toastify";
+import "./styles/ProductInfo.scss";
 
 interface ProductInfoProps {
   product: Product;
@@ -24,7 +25,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   };
 
   return (
-    <div className="product-info p-4 md:p-8">
+    <div className="product-info">
       <ProductDetails product={product} />
       <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
       <AddToCartButton

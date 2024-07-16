@@ -1,4 +1,25 @@
+@import "../../../styles/variables.scss";
+
 .product-info {
+  .product-detail {
+    h2 {
+      text-transform: uppercase;
+      color: $dark-grayish-blue;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    h1 {
+      color: $very-dark-blue;
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    p {
+      color: $dark-grayish-blue;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+  }
   .quantity-selector {
     display: flex;
     align-items: center;

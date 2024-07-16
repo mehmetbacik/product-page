@@ -2,4 +2,12 @@
 
 body {
     @include font;
+    .app {
+        .product-page {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            margin-top: 60px;
+        }
+    }
 }
