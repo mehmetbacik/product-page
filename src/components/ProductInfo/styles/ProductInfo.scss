@@ -2,6 +2,7 @@
 
 .product-info {
   .product-detail {
+    margin-bottom: 40px;
     h2 {
       text-transform: uppercase;
       color: $dark-grayish-blue;
@@ -10,7 +11,7 @@
     }
     h1 {
       color: $very-dark-blue;
-      font-size: 50px;
+      font-size: 45px;
       font-weight: bold;
       margin-bottom: 30px;
     }
@@ -18,6 +19,36 @@
       color: $dark-grayish-blue;
       line-height: 1.7;
       margin-bottom: 20px;
+    }
+    .prices {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      .first-line {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .discount-price {
+          color: $very-dark-blue;
+          font-size: 35px;
+          font-weight: bold;
+        }
+        .discount-percentange {
+          background-color: $black;
+          color: $white;
+          font-weight: bold;
+          padding: 4px 10px;
+          border-radius: 5px;
+        }
+      }
+      .second-line {
+        .product-price {
+          color: $dark-grayish-blue;
+          text-decoration-line: line-through;
+          font-weight: bold;
+        }
+      }
     }
   }
   .quantity-selector {

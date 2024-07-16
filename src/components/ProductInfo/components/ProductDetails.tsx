@@ -14,18 +14,24 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
       <h2>{product.brand}</h2>
       <h1>{product.title}</h1>
       <p>{product.description}</p>
-      <div className="flex items-center mb-4">
-        <span className="text-2xl font-bold">${discountPrice.toFixed(2)}</span>
-        {product.discountPercentage > 0 && (
-          <>
-            <span className="ml-4 text-green-600 bg-green-100 p-1 rounded">
-              {product.discountPercentage}%
-            </span>
-            <span className="ml-4 text-gray-500 line-through">
-              ${product.price.toFixed(2)}
-            </span>
-          </>
-        )}
+      <div className="prices">
+        <div className="first-line">
+          <span className="discount-price">${discountPrice.toFixed(2)}</span>
+          {product.discountPercentage > 0 && (
+            <>
+              <span className="discount-percentange">
+                {product.discountPercentage}%
+              </span>
+            </>
+          )}
+        </div>
+        <div className="second-line">
+          {product.discountPercentage > 0 && (
+            <>
+              <span className="product-price">${product.price.toFixed(2)}</span>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
