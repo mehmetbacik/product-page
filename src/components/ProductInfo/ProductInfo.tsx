@@ -27,11 +27,13 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   return (
     <div className="product-info">
       <ProductDetails product={product} />
-      <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
-      <AddToCartButton
-        quantity={quantity}
-        handleAddToCart={handleAddToCart}
-      />
+      <div className="flex items-center gap-3">
+        <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
+        <AddToCartButton
+          quantity={quantity}
+          handleAddToCart={handleAddToCart}
+        />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,6 @@
 import React from "react";
+import Plus from "../../../assets/images/icon-plus.svg";
+import Minus from "../../../assets/images/icon-minus.svg";
 
 interface QuantitySelectorProps {
   quantity: number;
@@ -20,20 +22,17 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
   };
 
   return (
-    <div className="quantity-selector flex items-center mb-4">
+    <div className="quantity-selector flex items-center">
       <button
         onClick={decreaseQuantity}
-        className="px-2 py-1 bg-gray-200 rounded-l"
+        className="w-full"
         disabled={quantity === 0}
       >
-        -
+        <img src={Minus} alt="minus" />
       </button>
-      <span className="px-4 py-2 bg-gray-100">{quantity}</span>
-      <button
-        onClick={increaseQuantity}
-        className="px-2 py-1 bg-gray-200 rounded-r"
-      >
-        +
+      <span className="w-full">{quantity}</span>
+      <button onClick={increaseQuantity} className="w-full">
+        <img src={Plus} alt="plus" />
       </button>
     </div>
   );

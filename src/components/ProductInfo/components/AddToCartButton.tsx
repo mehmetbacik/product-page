@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "../../../assets/images/icon-cart.svg";
 
 interface AddToCartButtonProps {
   quantity: number;
@@ -10,17 +11,20 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({
   handleAddToCart,
 }) => {
   return (
-    <button
-      onClick={handleAddToCart}
-      className={`bg-blue-600 text-white py-2 px-4 rounded ${
-        quantity === 0
-          ? "opacity-50 cursor-not-allowed"
-          : "hover:bg-blue-700 transition duration-300"
-      }`}
-      disabled={quantity === 0}
-    >
-      Add to Cart
-    </button>
+    <div className="add-cart-button">
+      <button
+        onClick={handleAddToCart}
+        className={`w-full ${
+          quantity === 0
+            ? "opacity-50 cursor-not-allowed"
+            : "transition duration-300"
+        }`}
+        disabled={quantity === 0}
+      >
+        <img src={Cart} alt="cart" className="image" />
+        Add to Cart
+      </button>
+    </div>
   );
 };
 
