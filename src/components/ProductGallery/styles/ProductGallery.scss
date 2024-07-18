@@ -1,4 +1,21 @@
+@import "../../../styles/variables.scss";
+
 .product-gallery {
-    background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 4;
+  .main-image {
+    img {
+      border-radius: 10px;
+    }
   }
-  
+  .thumbnails  {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    img {
+      border-radius: 10px;
+    }
+  }
+}

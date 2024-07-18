@@ -8,7 +8,7 @@ interface MainImageProps {
 
 const MainImage: React.FC<MainImageProps> = ({ src, alt, onClick }) => {
   return (
-    <div className="main-image mb-4">
+    <div className="main-image">
       <img
         src={src}
         alt={alt}

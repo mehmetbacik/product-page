@@ -4,6 +4,7 @@ import { Product } from "../../data/products";
 import MainImage from "./components/MainImage";
 import Thumbnail from "./components/Thumbnail";
 import GalleryPopup from "./components/GalleryPopup";
+import "./styles/ProductGallery.scss";
 
 interface ProductGalleryProps {
   product: Product;
@@ -45,7 +46,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
         alt={product.title}
         onClick={() => openGallery(mainImageIndex)}
       />
-      <div className="thumbnails grid grid-cols-4 gap-2">
+      <div className="thumbnails">
         {product.thumbnails.map((image, index) => (
           <Thumbnail
             key={index}
