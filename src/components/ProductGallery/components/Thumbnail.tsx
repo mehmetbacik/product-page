@@ -14,14 +14,16 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   onClick,
 }) => {
   return (
-    <img
-      src={src}
-      alt={alt}
-      className={`w-full h-full object-cover cursor-pointer ${
-        isSelected ? "border-2 border-blue-500" : ""
-      }`}
-      onClick={onClick}
-    />
+    <div className={`thumbnail-img ${isSelected ? "thumbnail-selected" : ""}`}>
+      <img
+        src={src}
+        alt={alt}
+        className={`w-full h-full ${
+          isSelected ? "thumbnail-img-selected" : ""
+        }`}
+        onClick={onClick}
+      />
+    </div>
   );
 };
 

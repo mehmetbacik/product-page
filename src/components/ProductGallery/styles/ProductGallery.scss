@@ -3,19 +3,34 @@
 .product-gallery {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   flex: 4;
   .main-image {
     img {
       border-radius: 10px;
     }
   }
-  .thumbnails  {
+  .thumbnails {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px;
-    img {
-      border-radius: 10px;
+    gap: 25px;
+    .thumbnail-img {
+      border: solid 2px transparent;
+      border-radius: 12px;
+      img {
+        border-radius: 10px;
+        cursor: pointer;
+        background-size: cover;
+        &.thumbnail-img-selected {
+          opacity: 0.5;
+        }
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      &.thumbnail-selected {
+        border-color: $orange;
+      }
     }
   }
 }
