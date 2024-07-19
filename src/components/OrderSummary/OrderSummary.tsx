@@ -1,6 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
 import OrderSummaryItem from "./components/OrderSummaryItem";
+import { products } from "../../data/products";
 import "./styles/OrderSummary.scss";
 
 interface OrderSummaryProps {
@@ -39,6 +40,7 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({ cartItems, onRemove }) => {
                 price={item.price}
                 quantity={item.quantity}
                 onRemove={handleRemove}
+                products={products}
               />
             ))}
           </div>

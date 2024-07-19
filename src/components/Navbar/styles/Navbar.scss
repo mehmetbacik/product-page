@@ -46,7 +46,8 @@
         transform: translateY(100%);
         z-index: 50;
         background-color: $white;
-        width: 350px;
+        border-radius: 10px;
+        width: 375px;
         .cart-icon {
           cursor: pointer;
         }
