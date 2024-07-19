@@ -10,13 +10,11 @@ interface OrderSummaryProps {
     quantity: number;
   }[];
   onRemove: (id: number) => void;
-  onClose: () => void;
 }
 
 const OrderSummary: React.FC<OrderSummaryProps> = ({
   cartItems,
   onRemove,
-  onClose,
 }) => {
   const handleRemove = (id: number, title: string) => {
     onRemove(id);
@@ -42,12 +40,6 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({
           ))}
         </div>
       )}
-      <button
-        className="bg-blue-600 text-white py-2 px-4 rounded mt-4 hover:bg-blue-700 transition duration-300"
-        onClick={onClose}
-      >
-        Close
-      </button>
     </div>
   );
 };

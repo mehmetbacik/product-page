@@ -37,6 +37,33 @@
     }
     .cart {
       cursor: pointer;
+      position: relative;
+      .cart-summary {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%);
+        z-index: 50;
+        background-color: $white;
+        width: 300px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -16px;
+          right: 16px;
+          width: 0;
+          height: 0;
+        }
+        .cart-icon {
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        .cart-summary {
+          display: block;
+        }
+      }
       .total-items {
         position: absolute;
         top: -5px;

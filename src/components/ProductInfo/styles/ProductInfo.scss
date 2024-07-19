@@ -86,6 +86,9 @@
       .image {
         filter: brightness(0.1);
       }
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }

@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import CartImg from "../../../../assets/images/icon-cart.svg";
 import OrderSummary from "../../../../components/OrderSummary/OrderSummary";
 import { useCart } from "../../../../context/CartContext";
 
 const Cart: React.FC = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const { cartItems, removeFromCart } = useCart();
-
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
-  };
 
   const handleRemove = (id: number) => {
     removeFromCart(id);
@@ -21,20 +16,17 @@ const Cart: React.FC = () => {
   );
 
   return (
-    <div className="cart relative flex items-center" onClick={toggleCart}>
-      <img src={CartImg} alt="Cart" />
+    <div className="cart relative flex items-center">
+      <img src={CartImg} alt="Cart" className="cart-icon" />
       <div className="total-items">
         <p>{totalItems}</p>
       </div>
-      {isCartOpen && (
-        <div className="cart-overlay fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-          <OrderSummary
-            cartItems={cartItems}
-            onRemove={handleRemove}
-            onClose={toggleCart}
-          />
-        </div>
-      )}
+      <div className="cart-summary">
+        <OrderSummary
+          cartItems={cartItems}
+          onRemove={handleRemove}
+        />
+      </div>
     </div>
   );
 };
