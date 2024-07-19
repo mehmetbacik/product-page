@@ -9,7 +9,7 @@ const App: React.FC = () => {
     <div className="app">
       <Navbar />
       <ProductPage />
-      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
+      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar />
     </div>
   );
 };

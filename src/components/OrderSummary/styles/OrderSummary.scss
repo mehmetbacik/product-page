@@ -1,3 +1,30 @@
+@import "../../../styles/variables.scss";
+
 .order-summary {
-  background-color: #fff;
+  background-color: $white;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 10px;
+  .title {
+    padding: 16px;
+    border-bottom: solid 1px $grayish-blue;
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  }
+  .content {
+    padding: 16px;
+    .empty {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      p {
+        color: $dark-grayish-blue;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
 }
