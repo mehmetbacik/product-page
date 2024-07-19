@@ -7,16 +7,14 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-radius: 10px;
   .title {
-    padding: 16px;
+    padding: 30px 25px;
     border-bottom: solid 1px $grayish-blue;
     h2 {
-      margin-top: 10px;
-      margin-bottom: 10px;
       font-weight: bold;
     }
   }
   .content {
-    padding: 16px;
+    padding: 30px 25px;
     .empty {
       padding-top: 60px;
       padding-bottom: 60px;
@@ -24,6 +22,26 @@
         color: $dark-grayish-blue;
         font-weight: bold;
         text-align: center;
+      }
+    }
+    .product-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .product-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .checkout {
+        background-color: $orange;
+        text-align: center;
+        border-radius: 10px;
+        padding: 15px 10px;
+        font-weight: bold;
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
   }
