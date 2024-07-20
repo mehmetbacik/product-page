@@ -49,7 +49,9 @@
         position: absolute;
         top: -30px;
         right: 0;
-        filter: brightness(0) invert(1);
+        img {
+          filter: brightness(0) invert(1);
+        }
       }
       .icon-prev {
         position: absolute;
@@ -62,8 +64,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border: solid 2px transparent;
         img {
           margin-right: 5px;
+        }
+        &:hover {
+          border-color: $orange;
         }
       }
       .icon-next {
@@ -77,8 +83,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border: solid 2px transparent;
         img {
           margin-left: 5px;
+        }
+        &:hover {
+          border-color: $orange;
         }
       }
     }
