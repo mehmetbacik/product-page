@@ -102,6 +102,13 @@
           height: 32px;
         }
       }
+      .cart {
+        .cart-summary {
+          right: -62px;
+          transform: translateY(112%);
+          width: 300px;
+        }
+      }
     }
   }
 }
