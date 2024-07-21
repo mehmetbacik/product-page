@@ -30,7 +30,7 @@ const GalleryPopup: React.FC<GalleryPopupProps> = ({
       exit={{ opacity: 0 }}
     >
       <motion.div
-        className="relative max-w-lg w-full mx-auto"
+        className="relative max-w-[300px] md:max-w-lg w-full mx-auto"
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0.9 }}

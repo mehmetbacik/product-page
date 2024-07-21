@@ -137,5 +137,28 @@
         }
       }
     }
+    .gallery-popup {
+      .gallery-content {
+        .product-image {
+          border-radius: 0;
+        }
+        .icon-prev {
+          left: 10px;
+          width: 35px;
+          height: 35px;
+        }
+        .icon-next {
+          right: 10px;
+          width: 35px;
+          height: 35px;
+        }
+      }
+      .thumbnails {
+        gap: 15px;
+        margin-top: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
   }
 }

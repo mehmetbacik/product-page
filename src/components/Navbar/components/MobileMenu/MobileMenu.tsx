@@ -9,26 +9,22 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, toggleMenu }) => (
   <div
-    className={`fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300 ${
+    className={`fixed inset-0 bg-black bg-opacity-75 z-10 transition-opacity duration-300 ${
       isOpen ? "opacity-100 visible" : "opacity-0 invisible"
     }`}
     onClick={toggleMenu}
   >
     <div
-      className={`fixed left-0 top-0 w-64 h-full bg-white shadow-md z-20 p-8 flex flex-col space-y-4 transform transition-transform duration-300 ${
+      className={`fixed left-0 top-0 w-[200px] h-full bg-white shadow-md z-20 p-8 flex flex-col space-y-4 transform transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
       onClick={(e) => e.stopPropagation()}
     >
-      <button onClick={toggleMenu} className="self-end mb-4">
+      <button onClick={toggleMenu} className="self-start mb-4">
         <img src={CloseImg} alt="Close" />
       </button>
       {menuItems.map((item) => (
-        <a
-          key={item.name}
-          href={item.href}
-          className="text-gray-700 hover:text-gray-900"
-        >
+        <a key={item.name} href={item.href} className="text-black font-bold">
           {item.name}
         </a>
       ))}
