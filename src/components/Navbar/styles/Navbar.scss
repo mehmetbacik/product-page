@@ -89,13 +89,33 @@
 }
 
 @media (max-width: 425px) {
+  .navbar {
+    padding: 10px 20px;
+    .nav-left {
+      gap: 20px;
+    }
+    .nav-right {
+      gap: 20px;
+      .user {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .cart {
+        .cart-summary {
+          right: -68px;
+          transform: translateY(112%);
+          width: 400px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 320px) {
   .navbar {
-    padding: 10px 20px;
     .nav-right {
-      gap: 20px;
       .user {
         img {
           width: 32px;
@@ -105,7 +125,6 @@
       .cart {
         .cart-summary {
           right: -62px;
-          transform: translateY(112%);
           width: 300px;
         }
       }

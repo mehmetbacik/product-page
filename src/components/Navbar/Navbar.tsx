@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar container mx-auto mb-0 md:mb-4 flex justify-between items-center relative">
-      <MobileMenuButton toggleMenu={toggleMenu} />
       <div className="nav-left">
+        <MobileMenuButton toggleMenu={toggleMenu} />
         <Logo />
         <NavLinks />
       </div>

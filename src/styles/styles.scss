@@ -27,17 +27,24 @@ body {
 }
 
 @media (max-width: 425px) {
+  body {
+    .app {
+      .product-page {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+  }
 }
 
 @media (max-width: 320px) {
   body {
     .app {
       .product-page {
-        flex-direction: column;
         gap: 20px;
-        margin-top: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
       }
     }
   }
