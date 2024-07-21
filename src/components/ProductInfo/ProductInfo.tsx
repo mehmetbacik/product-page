@@ -27,7 +27,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   return (
     <div className="product-info">
       <ProductDetails product={product} />
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-3">
         <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
         <AddToCartButton
           quantity={quantity}

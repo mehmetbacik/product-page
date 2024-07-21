@@ -102,3 +102,40 @@
     }
   }
 }
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 320px) {
+  .product-gallery {
+    gap: 15px;
+    .main-image {
+      img {
+        border-radius: 0px;
+      }
+    }
+    .thumbnails {
+      gap: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      .thumbnail-img {
+        border-radius: 0px;
+        img {
+          border-radius: 0px;
+        }
+      }
+    }
+  }
+}

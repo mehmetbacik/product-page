@@ -1,15 +1,44 @@
 @import "variables";
 
 body {
-    @include font;
-    .app {
-        .product-page {
-            display: flex;
-            align-items: center;
-            gap: 120px;
-            margin-top: 60px;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
+  @include font;
+  .app {
+    .product-page {
+      display: flex;
+      align-items: center;
+      gap: 120px;
+      margin-top: 60px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
+  }
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 320px) {
+  body {
+    .app {
+      .product-page {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+  }
 }

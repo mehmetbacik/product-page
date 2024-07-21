@@ -92,3 +92,64 @@
     }
   }
 }
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+}
+
+@media (max-width: 320px) {
+  .product-info {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    .product-detail {
+      margin-bottom: 25px;
+      h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 12px;
+      }
+      .prices {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .first-line {
+          .discount-price {
+            font-size: 30px;
+          }
+          .discount-percentange {
+            font-size: 12px;
+            padding: 4px 8px;
+          }
+        }
+      }
+    }
+    .quantity-selector {
+      width: 100%;
+      padding: 15px 5px;
+    }
+    .add-cart-button {
+      width: 100%;
+      button {
+        padding: 15px 5px;
+      }
+    }
+  }
+}
