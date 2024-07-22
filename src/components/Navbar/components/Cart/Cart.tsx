@@ -16,16 +16,15 @@ const Cart: React.FC = () => {
   );
 
   return (
-    <div className="cart relative flex items-center">
-      <img src={CartImg} alt="Cart" className="cart-icon" />
-      <div className="total-items">
-        <p>{totalItems}</p>
+    <div className="cart flex items-center">
+      <div className="cart-icon relative">
+        <img src={CartImg} alt="Cart" className="cart-icon" />
+        <div className="total-items">
+          <p>{totalItems}</p>
+        </div>
       </div>
       <div className="cart-summary">
-        <OrderSummary
-          cartItems={cartItems}
-          onRemove={handleRemove}
-        />
+        <OrderSummary cartItems={cartItems} onRemove={handleRemove} />
       </div>
     </div>
   );

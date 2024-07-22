@@ -116,18 +116,15 @@
 }
 
 @media (max-width: 425px) {
-}
-
-@media (max-width: 320px) {
   .product-gallery {
-    gap: 15px;
+    gap: 20px;
     .main-image {
       img {
         border-radius: 0px;
       }
     }
     .thumbnails {
-      gap: 15px;
+      gap: 20px;
       padding-left: 20px;
       padding-right: 20px;
       .thumbnail-img {
@@ -159,6 +156,15 @@
         padding-left: 0px;
         padding-right: 0px;
       }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .product-gallery {
+    gap: 15px;
+    .thumbnails {
+      gap: 15px;
     }
   }
 }

@@ -47,8 +47,6 @@
         right: 0;
         transform: translateY(100%);
         z-index: 50;
-        background-color: $white;
-        border-radius: 10px;
         width: 375px;
         .cart-icon {
           cursor: pointer;
@@ -103,15 +101,18 @@
         }
       }
       .cart {
+        position: inherit;
         .cart-summary {
-          right: -68px;
-          transform: translateY(112%);
-          width: 400px;
+          left: 0;
+          transform: translateY(100%);
+          width: 100%;
+          padding: 20px;
         }
       }
     }
   }
 }
+
 
 @media (max-width: 320px) {
   .navbar {
@@ -120,12 +121,6 @@
         img {
           width: 32px;
           height: 32px;
-        }
-      }
-      .cart {
-        .cart-summary {
-          right: -62px;
-          width: 300px;
         }
       }
     }

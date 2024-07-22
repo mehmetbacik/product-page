@@ -106,9 +106,6 @@
 }
 
 @media (max-width: 425px) {
-}
-
-@media (max-width: 320px) {
   .product-info {
     padding-left: 20px;
     padding-right: 20px;
@@ -120,11 +117,11 @@
         margin-bottom: 10px;
       }
       h1 {
-        font-size: 28px;
+        font-size: 30px;
         margin-bottom: 12px;
       }
       p {
-        font-size: 12px;
+        font-size: 14px;
       }
       .prices {
         flex-direction: row;
@@ -149,6 +146,29 @@
       width: 100%;
       button {
         padding: 15px 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .product-info {
+    .product-detail {
+      h2 {
+        font-size: 14px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 12px;
+      }
+      .prices {
+        .first-line {
+          .discount-price {
+            font-size: 30px;
+          }
+        }
       }
     }
   }

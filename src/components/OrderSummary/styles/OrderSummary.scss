@@ -83,6 +83,35 @@
 }
 
 @media (max-width: 425px) {
+  .order-summary {
+    .content {
+      .product-content {
+        .product-item {
+          gap: 10px;
+          .product-image {
+            width: 60px;
+            height: 60px;
+          }
+          .product-item-content {
+            h3 {
+              font-size: 14px;
+            }
+            .price {
+              .product-quantity {
+                font-size: 14px;
+              }
+              .product-price {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .checkout {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 320px) {
