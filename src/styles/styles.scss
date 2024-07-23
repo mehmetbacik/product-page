@@ -21,9 +21,27 @@ body {
 }
 
 @media (max-width: 992px) {
+  body {
+    .app {
+      .product-page {
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 60px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  body {
+    .app {
+      .product-page {
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 60px;
+      }
+    }
+  }
 }
 
 @media (max-width: 425px) {
