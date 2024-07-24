@@ -82,7 +82,7 @@ export default {
 
 ## Deploy
 
-For a detailed exploration of the project, you can visit the [deployed site here](https://#.vercel.app/).
+For a detailed exploration of the project, you can visit the [deployed site here](https://product-page-orcin-phi.vercel.app/).
 
 ## GitHub Page
 
@@ -91,4 +91,5 @@ GitHub Repository: [https://github.com/mehmetbacik/product-page.git](https://git
 ## Contributions
 
 If you wish to contribute to the project, please open a pull request. Any contributions and feedback are welcome!
+
 ---
