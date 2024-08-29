@@ -16,6 +16,7 @@ This project is a modern e-commerce web application where users can browse produ
 
 - **React.js:** A modern and fast library for building user interfaces.
 - **TypeScript:** A statically typed superset of JavaScript.
+- **Vite:** Uses Vite for fast and efficient development and build processes.
 - **Tailwind CSS:** A fast and flexible CSS framework, customized for this project to provide quick and simple styling.
 - **SCSS:** A more powerful and feature-rich extension of CSS that enables better organization and maintainability of stylesheets.
 - **Framer Motion:** An animation library for React, used to easily add animations to the project.
